@@ -25,3 +25,13 @@ and the `.profile` file would be able to run use the configuration without any
 silly error, yikes!!
 
 `sudo chmod +rwx /usr/local/etc/no-ip2.conf`
+
+
+# more
+
+`watch-pi-temp.sh`
+
+```bash
+watch -n 1 ./pi-temp.sh
+# Here n is 1 i.e., interval time, if u omit it default will be 2secs.
+```
