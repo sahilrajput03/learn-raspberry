@@ -23,11 +23,11 @@ Some saved info about the device.
 - You can copy your private key file by: `ssh-copy-id -i ~/.ssh/myKeys/april-2022 pi` where pi is my ssh alias(otherwise you can use ip address in its place). Also, you must specify the private key path in `IdentityFile` key for the ssh alias definition in `~/.ssh/config` file so it picks up the private key file auotmatically when you do `ssh pi` in future.
 
 **Connecting wifi**
-- Connecting to wifi: Install `nmtui` by command: `sudo apt install network-manager`.
-- Now we enter password via the menu we see with `nmtui` program, its fun though and connect to wifi.
-- Now we can remove the ethernet cable and just see the ip address the device gets from the same router's device page under `Wi-Fi devices` this time.
-- Now we copy that `ip address` and use username as `ubuntu` and use that in our ~/.ssh/config file (by replacing old ip address which belonged to wired connnection).
-- Now when you try to connect say by `ssh pi` we see some error like:
+1. Connecting to wifi: Install `nmtui` by command: `sudo apt install network-manager`.
+2. Now we enter password via the menu we see with `nmtui` program, its fun though and connect to wifi.
+3. Now we can remove the ethernet cable and just see the ip address the device gets from the same router's device page under `Wi-Fi devices` this time.
+4. Now we copy that `ip address` and use username as `ubuntu` and use that in our ~/.ssh/config file (by replacing old ip address which belonged to wired connnection).
+5. Now when you try to connect say by `ssh pi` we see some error like:
 
 ```bash
 array@arch-os Downloads$ ssh ubuntu@192.168.18.13
@@ -46,4 +46,4 @@ Host key for 192.168.18.13 has changed and you have requested strict checking.
 Host key verification failed.
 ```
 
-So, to fix that we need to run `ssh-keygen -R pi`, and after that it will work simply. Source: [Click here](https://stackoverflow.com/a/23150466/10012446)
+**RESULT:** So, to fix that we need to run `ssh-keygen -R pi`, and after that it will work simply. Source: [Click here](https://stackoverflow.com/a/23150466/10012446)
