@@ -4,7 +4,7 @@ Some saved info about the device.
 
 # `armv7l` processor can only run 32 bit OS
 
-Source: [Click here](https://askubuntu.com/questions/928227/is-armv7l-32-or-64-bit), 
+Source: [Click here](https://askubuntu.com/questions/928227/is-armv7l-32-or-64-bit), Source2: [Click here](https://unix.stackexchange.com/questions/136407/is-my-linux-arm-32-or-64-bit)
 
 ### Is my running Linux kernel 32 bit or 64 bit?
 
