@@ -2,7 +2,11 @@
 
 Some saved info about the device.
 
-# `armv7l` processor can only run 32 bit OS
+## Other Links
+
+- Official Article: Installing mongodb on 64 bit raspberry processor: [Click here ](https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/)
+
+## `armv7l` processor can only run 32 bit OS
 
 Source: [Click here](https://askubuntu.com/questions/928227/is-armv7l-32-or-64-bit), Source2: [Click here](https://unix.stackexchange.com/questions/136407/is-my-linux-arm-32-or-64-bit)
 
