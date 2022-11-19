@@ -121,6 +121,7 @@ sudo usermod -aG docker $(whoami)
 # Below works for my case, yo!! PARTY
 sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo:4.4.18
 
+# mongod docker hub page: https://hub.docker.com/r/arm64v8/mongo/
 
 # for other processors
 sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic
