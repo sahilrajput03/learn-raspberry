@@ -50,3 +50,34 @@ Host key verification failed.
 ```
 
 **RESULT:** So, to fix that we need to run `ssh-keygen -R pi`, and after that it will work simply. Source: [Click here](https://stackoverflow.com/a/23150466/10012446)
+
+## Installing mongodb
+
+If you get below error,
+
+```bash
+ubuntu@ubuntu:~$ sudo apt update
+Hit:1 http://ports.ubuntu.com/ubuntu-ports kinetic InRelease
+Hit:2 http://ports.ubuntu.com/ubuntu-ports kinetic-updates InRelease
+Ign:3 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 InRelease
+Hit:4 http://ports.ubuntu.com/ubuntu-ports kinetic-backports InRelease
+Hit:5 http://ports.ubuntu.com/ubuntu-ports kinetic-security InRelease
+Hit:6 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 Release
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+28 packages can be upgraded. Run 'apt list --upgradable' to see them.
+W: https://repo.mongodb.org/apt/ubuntu/dists/focal/mongodb-org/4.4/Release.gpg: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+```
+
+you can fix it by running `cd /etc/apt; sudo cp trusted.gpg trusted.gpg.d`. Source: [Click here] And now you can run `sudo apt get update` successfully.
+
+
+FYI: What actually worked for me to install mongodb is:
+
+```bash
+wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc |  gpg --dearmor | sudo tee /usr/share/keyrings/mongodb.gpg > /dev/null
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+sudo apt update
+sudo apt install mongodb-org
+```
