@@ -7,6 +7,12 @@ Some saved info about the device.
 - Official Article: Installing mongodb on 64 bit raspberry processor: [Click here ](https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/)
 - Official Response (Mongodb): Installation on 32bit system: [Click here](https://www.mongodb.com/community/forums/t/installation-on-32bit-system/106492). **TLDR: NO, its not at all recommended bcoz newer version are no longer developer for 32-bit architecture.**
 
+# NOTE: Below output is from the Rasbian OS only (i.e., 32 bit os, and it was showing all informatino wrong about the processor i.e, arvl7 but my actual processor was `Cortes-A72 Processor` {Device Name: `Raspberry-pi-4-model-b`})
+
+Check the problem stated here: [Click here](https://raspberrypi.stackexchange.com/questions/101215/why-raspberry-pi-4b-claims-that-its-processor-is-armv7l-when-in-official-specif)
+
+**NOTE: My raspberry process is 64-bi quad-core Cortex-A72 processor.**
+
 ## `armv7l` processor can only run 32 bit OS
 
 Source: [Click here](https://askubuntu.com/questions/928227/is-armv7l-32-or-64-bit), Source2: [Click here](https://unix.stackexchange.com/questions/136407/is-my-linux-arm-32-or-64-bit)
