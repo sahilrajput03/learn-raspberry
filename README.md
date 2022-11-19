@@ -117,7 +117,10 @@ sudo usermod -aG docker $(whoami)
 
 
 # for armv8 (i.e, my raspi with ubuntu 22 (jammy)), src: https://stackoverflow.com/a/72688644/10012446
-sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo
+# (Latest version not supported so I am using tag 4.4.18 <which is most recent supported version for arm64v8 processors>)sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo
+# Below works for my case, yo!! PARTY
+sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo:4.4.18
+
 
 # for other processors
 sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic
@@ -130,3 +133,4 @@ sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic
 Source: [Click here](https://www.mongodb.com/docs/manual/release-notes/4.4)
 
 ![image](https://user-images.githubusercontent.com/31458531/202874380-59944495-c164-4d8d-921e-dad85f76454c.png)
+
