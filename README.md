@@ -23,6 +23,7 @@ Some saved info about the device.
 - You can copy your private key file by: `ssh-copy-id -i ~/.ssh/myKeys/april-2022 pi` where pi is my ssh alias(otherwise you can use ip address in its place). Also, you must specify the private key path in `IdentityFile` key for the ssh alias definition in `~/.ssh/config` file so it picks up the private key file auotmatically when you do `ssh pi` in future.
 
 **Connecting wifi**
+*FYI: There is an automated way of making the os connect to wifi automatically on the first start if you put your wifi SSID and password to the `network-config` [file as stated here in docs of mongodb](https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/).*
 1. Connecting to wifi: Install `nmtui` by command: `sudo apt install network-manager`.
 2. Now we enter password via the menu we see with `nmtui` program, its fun though and connect to wifi.
 3. Now we can remove the ethernet cable and just see the ip address the device gets from the same router's device page under `Wi-Fi devices` this time.
