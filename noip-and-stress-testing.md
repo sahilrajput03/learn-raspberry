@@ -26,7 +26,6 @@ silly error, yikes!!
 
 `sudo chmod +rwx /usr/local/etc/no-ip2.conf`
 
-
 # more
 
 `watch-pi-temp.sh`
@@ -34,4 +33,28 @@ silly error, yikes!!
 ```bash
 watch -n 1 ./pi-temp.sh
 # Here n is 1 i.e., interval time, if u omit it default will be 2secs.
+```
+`pi-temp.sh`
+
+```bash
+#!/bin/bash
+# Script: my-pi-temp.sh
+# Purpose: Display the ARM CPU and GPU  temperature of Raspberry Pi 2/3
+# Author: Vivek Gite <www.cyberciti.biz> under GPL v2.x+
+# -------------------------------------------------------
+cpu=$(</sys/class/thermal/thermal_zone0/temp)
+echo "$(date) @ $(hostname)"
+echo "-------------------------------------------"
+echo "GPU => $(/opt/vc/bin/vcgencmd measure_temp)"
+echo "CPU => $((cpu/1000))'C"
+#!/bin/bash
+# Script: my-pi-temp.sh
+# Purpose: Display the ARM CPU and GPU  temperature of Raspberry Pi 2/3
+# Author: Vivek Gite <www.cyberciti.biz> under GPL v2.x+
+# -------------------------------------------------------
+cpu=$(</sys/class/thermal/thermal_zone0/temp)
+echo "$(date) @ $(hostname)"
+echo "-------------------------------------------"
+echo "GPU => $(/opt/vc/bin/vcgencmd measure_temp)"
+echo "CPU => $((cpu/1000))'C"
 ```
