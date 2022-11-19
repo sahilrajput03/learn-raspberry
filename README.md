@@ -53,6 +53,8 @@ Host key verification failed.
 
 ## Installing mongodb
 
+Official Guide of Install: [Click here](https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/)
+
 If you get below error,
 
 ```bash
@@ -80,4 +82,14 @@ wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc |  gpg --dearmor | 
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 sudo apt update
 sudo apt install mongodb-org
+
+# ~sahil
+# Ensure mongod config is picked up:
+sudo systemctl daemon-reload
+
+# Tell systemd to run mongod on reboot:
+sudo systemctl enable mongod
+
+# Start up mongod!
+sudo systemctl start mongod
 ```
