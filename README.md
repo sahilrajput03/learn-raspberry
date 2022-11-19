@@ -114,4 +114,8 @@ sudo rm /etc/apt/sources.list.d/mongodb-org-4.4.list
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo bash get-docker.sh
 sudo usermod -aG docker $(whoami)
+
+
+# for armv8 (i.e, my raspi with ubuntu 22 (jammy))
+docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo
 ```
