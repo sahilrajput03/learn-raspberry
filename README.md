@@ -117,8 +117,8 @@ sudo usermod -aG docker $(whoami)
 
 
 # for armv8 (i.e, my raspi with ubuntu 22 (jammy)), src: https://stackoverflow.com/a/72688644/10012446
-docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo
+sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo
 
 # for other processors
-docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic
+sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic
 ```
