@@ -107,3 +107,11 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb
 sudo rm /etc/apt/sources.list.d/mongodb-org-5.0.list
 sudo rm /etc/apt/sources.list.d/mongodb-org-4.4.list
 ```
+
+## install docker (a way to simply install mongodb using docker TESTING PHASE)
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo bash get-docker.sh
+sudo usermod -aG docker $(whoami)
+```
