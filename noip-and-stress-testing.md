@@ -1,4 +1,4 @@
-# noip
+# README - Previously
 
 ## Some useful commands
 
@@ -25,6 +25,14 @@ and the `.profile` file would be able to run use the configuration without any
 silly error, yikes!!
 
 `sudo chmod +rwx /usr/local/etc/no-ip2.conf`
+
+Also, you can use below commands in `~/.profile` file to start noip on boot:
+
+```bash
+#Sahil's initial startup services.
+[ "$(type noip2 2> /dev/null)" ] && [ -z "$(pgrep noip2)" ] && (noip2 &)
+#^ this just runs the noip2 service.
+```
 
 # more
 
