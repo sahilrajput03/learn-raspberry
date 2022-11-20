@@ -4,6 +4,9 @@
 
 - Official Article: Installing mongodb on 64 bit raspberry processor: [Click here ](https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/)
 - Official Article: Mongodb Authentication: [Click here](https://www.mongodb.com/features/mongodb-authentication)
+	- Docs - User Defined Roles: [Click here](https://www.mongodb.com/docs/manual/core/security-user-defined-roles/#std-label-user-defined-roles)
+	- `db.createRole()` : [Click here](https://www.mongodb.com/docs/manual/reference/method/db.createRole/#mongodb-method-db.createRole)
+	- Builtin Roles: [Click here](https://www.mongodb.com/docs/manual/reference/built-in-roles/#mongodb-authrole-userAdmin)
 - Docker Installation: [Click here](https://github.com/sahilrajput03/learn-raspberry/#install-docker)
 - Source: [Stackoverflow Answer](https://stackoverflow.com/a/72688644/10012446)
 - Docker Hub: [arm64v8/mongo](https://hub.docker.com/r/arm64v8/mongo/)
