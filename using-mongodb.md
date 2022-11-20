@@ -26,9 +26,6 @@ sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic
 
 - **MongoDB 4.4.18 Released on November 15, 2022**: [Click here](https://www.mongodb.com/docs/manual/release-notes/4.4)
 
-![image](https://user-images.githubusercontent.com/31458531/202874380-59944495-c164-4d8d-921e-dad85f76454c.png)
-
-
 
 ## Installing mongodb
 
@@ -57,6 +54,7 @@ you can fix it by running `cd /etc/apt; sudo cp trusted.gpg trusted.gpg.d`. Sour
 FYI: What actually worked for me to install mongodb is: Source: [Click here](https://www.mongodb.com/community/forums/t/installing-mongodb-over-ubuntu-22-04/159931)
 
 ```bash
+# for ubuntu lts 20 i.e, `ubuntu focal` (fyi: I am using lts 22 i.e, `ubuntu jammy`)
 wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc |  gpg --dearmor | sudo tee /usr/share/keyrings/mongodb.gpg > /dev/null
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 sudo apt update
@@ -73,7 +71,9 @@ sudo systemctl enable mongod
 sudo systemctl start mongod
 ```
 
-```
+- Installing 4.4 key and repository to `ubuntu jammy`
+
+```bash
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc |  gpg --dearmor | sudo tee /usr/share/keyrings/mongodb.gpg > /dev/null
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 
@@ -82,7 +82,7 @@ echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb.gpg ] https:/
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 
-# removing
+# removinng repository list from `ubuntu jammy`
 sudo rm /etc/apt/sources.list.d/mongodb-org-5.0.list
 sudo rm /etc/apt/sources.list.d/mongodb-org-4.4.list
 ```
