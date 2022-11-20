@@ -27,7 +27,9 @@ docker start mongo
 docker update --restart always mongo
 
 # connecting to mongo db from remote pc
+mongo 'YOUR-RPI-IP-ADDRESS'
 mongo --host 'YOUR-RPI-IP-ADDRESS'
+mongo mynotifyservice.ddns.net:27017
 ```
 
 *Fyi:(\*not tested yet\*) You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.*
