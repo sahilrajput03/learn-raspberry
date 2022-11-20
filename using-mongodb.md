@@ -15,6 +15,9 @@ sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo:
 # OR: To run the docker container automatically when system is restarted. Source: https://docs.docker.com/config/containers/start-containers-automatically/
 sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo --restart always arm64v8/mongo:4.4.18
 
+## TESTING WITH CUSTOM CONFIG FILE
+docker run --name mongo -v "$(pwd)"/etc/mongod.conf:/etc/mongo/mongod.conf -d --restart always arm64v8/mongo:4.4.18 --config /etc/mongo/mongod.conf
+
 # you can attach to continer by
 docker attach -it mongo bash
 ##### ##### ##### #####
