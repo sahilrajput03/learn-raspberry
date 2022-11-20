@@ -50,3 +50,12 @@ Host key verification failed.
 ```
 
 **RESULT:** So, to fix that we need to run `ssh-keygen -R pi`, and after that it will work simply. Source: [Click here](https://stackoverflow.com/a/23150466/10012446)
+
+
+## Install docker
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo bash get-docker.sh
+sudo usermod -aG docker $(whoami)
+```
