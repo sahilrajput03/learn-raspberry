@@ -55,11 +55,12 @@ mongo -u "root" -p "root"
 ```
 
 ```js
-// mongo shell
-// *NOTE*: **Switching to admin database is necessary becoz only then we can create user ~Sahil**
+
+// USING MONGO SHELL TO CREATING USER with (username,password)=(sahil,lihas)
+
+// *NOTE*: Switching to admin database is *NECESSARY* becoz only then we can create user. Source: https://stackoverflow.com/a/65266251/10012446
 use admin
 
-// CREATING USER with username=sahil, password=lihas
 db.createUser(
 	{
 		user: "sahil",
