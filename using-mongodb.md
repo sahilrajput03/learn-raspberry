@@ -56,7 +56,7 @@ mongo -u "root" -p "root"
 
 ```js
 // mongo shell
-# *NOTE*: **Switching to admin database is necessary becoz only then we can create user ~Sahil**
+// *NOTE*: **Switching to admin database is necessary becoz only then we can create user ~Sahil**
 use admin
 
 // CREATING USER with username=sahil, password=lihas
