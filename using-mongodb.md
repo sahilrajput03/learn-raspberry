@@ -2,22 +2,22 @@
 
 ## install mongodb's docker image
 
-Docker Hub: [arm64v8/mongo](https://hub.docker.com/r/arm64v8/mongo/)
+- Source: [Stackoverflow Answer](https://stackoverflow.com/a/72688644/10012446)
+- Docker Hub: [arm64v8/mongo](https://hub.docker.com/r/arm64v8/mongo/)
+- OS: Ubuntu jammy (LTS 22) armv8 Version
 
-OS: Ubuntu jammy (LTS 22) armv8 Version
+Fyi: You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.
 
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo bash get-docker.sh
 sudo usermod -aG docker $(whoami)
 
-# , Source: https://stackoverflow.com/a/72688644/10012446
+# run `arm64v8/mongo` image
 sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo:4.4.18
-# check container details
-docker ps
 
-# for other processors
-sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic
+# verify container details
+docker ps
 ```
 
 ## Why I must install 4.* only (and NOT version 5.x or 6.x of mongodb)?
