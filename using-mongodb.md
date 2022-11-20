@@ -7,10 +7,6 @@
 - OS: Ubuntu jammy (LTS 22) armv8 Version
 
 ```bash
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo bash get-docker.sh
-sudo usermod -aG docker $(whoami)
-
 # run `arm64v8/mongo` image
 sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo:4.4.18
 
