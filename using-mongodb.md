@@ -74,6 +74,11 @@ db.removeUser("UsernName")
 exit
 ```
 
+Also, non authenticated users would see such error when trying to insert documents
+
+![image](https://user-images.githubusercontent.com/31458531/202909615-fea3765e-bd35-4cf2-89e8-93712aa3d696.png)
+
+
 *Fyi:(\*not tested yet\*) You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.*
 
 
