@@ -2,6 +2,10 @@
 
 Some saved info about the device.
 
+# TODO:
+
+- Try out installing debian coz its only 400mb and its base of 90% linux distros. Watch how to install by DistroTube: [Click here](https://youtu.be/-pnLU66ZFFA)
+
 # Device Details
 
 - raspberry pi4 model-b
