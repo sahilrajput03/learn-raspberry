@@ -56,13 +56,14 @@ mongo -u "root" -p "root"
 
 ```js
 // mongo shell
-// CREATING USER
+# *NOTE*: **Switching to admin database is necessary becoz only then we can create user ~Sahil**
 use admin
-// NOTE: user: "admin" is the username and pwd: "admin" defined password for the user
+
+// CREATING USER with username=sahil, password=lihas
 db.createUser(
 	{
-		user: "admin",
-		pwd: "admin",
+		user: "sahil",
+		pwd: "lihas",
 		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]
 	}
 )
