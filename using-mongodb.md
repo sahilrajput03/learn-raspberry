@@ -42,6 +42,41 @@ mongo --host 'YOUR-RPI-IP-ADDRESS'
 mongo mynotifyservice.ddns.net:27017
 ```
 
+```bash
+# DOCKER DB CREATION COMMAND
+sudo docker run --name mongo -d -p 27017:27017 -v /home/ubuntu/mongo-with-docker/etc/mongo/mongod.conf:/etc/mongod.conf.orig -d --restart always -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=root arm64v8/mongo:4.4.18
+
+# NOW BELOW COMMAND SHOULD BE HELP TO CONNECT
+mongo -u "root" -p "root"
+
+# CONNECTION COMMAND
+# mongo -u "root" -p "root" --host 192.168.18.13
+# mongodb://root:root@192.168.18.13:27017/
+```
+
+```js
+// mongo shell
+// CREATING USER
+use admin
+// NOTE: user: "admin" is the username and pwd: "admin" defined password for the user
+db.createUser(
+	{
+		user: "admin",
+		pwd: "admin",
+		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]
+	}
+)
+
+# SHOW CURRENT USER INFORMATION IN MONGO SHELL
+db.runCommand({connectionStatus : 1})
+
+# REMOVE USER
+db.removeUser("UsernName")
+
+# EXIT SHELL
+exit
+```
+
 *Fyi:(\*not tested yet\*) You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.*
 
 
