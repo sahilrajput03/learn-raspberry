@@ -1,5 +1,35 @@
 # Install mongodb
 
+## install mongodb's docker image
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo bash get-docker.sh
+sudo usermod -aG docker $(whoami)
+
+
+# `mongod` Docker hub page: https://hub.docker.com/r/arm64v8/mongo/
+# For armv8 (i.e, my raspi with ubuntu 22 (jammy)), src: https://stackoverflow.com/a/72688644/10012446
+# (Latest version not supported so I am using tag 4.4.18 <which is most recent supported version for arm64v8 processors>)sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo
+# Below works for my case, yo!! PARTY
+sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo:4.4.18
+# check container details
+docker ps
+
+# for other processors
+sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic
+```
+
+## I must install 4.*? version on my arm64v8 processor now coz 5.* and above are not supported currently
+
+![image](https://user-images.githubusercontent.com/31458531/202874252-72f266a0-518f-4e26-9050-281a12f50854.png)
+
+- **MongoDB 4.4.18 Released on November 15, 2022**: [Click here](https://www.mongodb.com/docs/manual/release-notes/4.4)
+
+![image](https://user-images.githubusercontent.com/31458531/202874380-59944495-c164-4d8d-921e-dad85f76454c.png)
+
+
+
 ## Installing mongodb
 
 Official Guide of Install: [Click here](https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/)
@@ -56,32 +86,3 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb
 sudo rm /etc/apt/sources.list.d/mongodb-org-5.0.list
 sudo rm /etc/apt/sources.list.d/mongodb-org-4.4.list
 ```
-
-## install docker (a way to simply install mongodb using docker TESTING PHASE)
-
-```bash
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo bash get-docker.sh
-sudo usermod -aG docker $(whoami)
-
-
-# `mongod` Docker hub page: https://hub.docker.com/r/arm64v8/mongo/
-# For armv8 (i.e, my raspi with ubuntu 22 (jammy)), src: https://stackoverflow.com/a/72688644/10012446
-# (Latest version not supported so I am using tag 4.4.18 <which is most recent supported version for arm64v8 processors>)sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo
-# Below works for my case, yo!! PARTY
-sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo:4.4.18
-# check container details
-docker ps
-
-# for other processors
-sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic
-```
-
-## I must install 4.*? version on my arm64v8 processor now coz 5.* and above are not supported currently
-
-![image](https://user-images.githubusercontent.com/31458531/202874252-72f266a0-518f-4e26-9050-281a12f50854.png)
-
-Source: [Click here](https://www.mongodb.com/docs/manual/release-notes/4.4)
-
-![image](https://user-images.githubusercontent.com/31458531/202874380-59944495-c164-4d8d-921e-dad85f76454c.png)
-
