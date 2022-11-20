@@ -68,6 +68,11 @@ db.createUser(
 // SHOW CURRENT USER INFORMATION IN MONGO SHELL
 db.runCommand({connectionStatus : 1})
 
+// SHOW USERS (*Another*)
+use admin // change to admin db
+show users // show users collection
+show roles // show available roles
+
 
 // REMOVE USER
 db.removeUser("UsernName")
