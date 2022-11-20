@@ -2,15 +2,16 @@
 
 ## install mongodb's docker image
 
+Docker Hub: [arm64v8/mongo](https://hub.docker.com/r/arm64v8/mongo/)
+
+OS: Ubuntu jammy (LTS 22) armv8 Version
+
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo bash get-docker.sh
 sudo usermod -aG docker $(whoami)
 
-
-# `mongod` Docker hub page: https://hub.docker.com/r/arm64v8/mongo/
-# For armv8 (i.e, my raspi with ubuntu 22 (jammy)), src: https://stackoverflow.com/a/72688644/10012446
-# Below works for my case, yo!! PARTY
+# , Source: https://stackoverflow.com/a/72688644/10012446
 sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo:4.4.18
 # check container details
 docker ps
