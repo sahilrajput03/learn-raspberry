@@ -4,7 +4,7 @@ Some saved info about the device.
 
 # TODO:
 
-- Try out installing debian coz its only 400mb and its base of 90% linux distros. Watch how to install by DistroTube: [Click here](https://youtu.be/-pnLU66ZFFA). Good thing is that I can have my raspbery pi attachd to my tv and I can switch to pc anytime I want, but I need to make room for the harddisk to be attached to the raspi to it all the time for that, so I can use my harddisk as a bit drive with it.
+- Try out installing debian coz its only 400mb and its base of 90% linux distros. Watch how to install by DistroTube: [Click here](https://youtu.be/-pnLU66ZFFA). Good thing is that I can have my raspbery pi attachd to my tv and I can switch to pc anytime I want, but I need to make room for the harddisk to be attached to the raspi to it all the time for that, so I can use my harddisk as a bit drive with it. Also, another reason to use debian instead of ubuntu server is that ubuntu server size is around 1.2 GB whereas the debian gui os is only 380MB only.
 
 # Device Details
 
