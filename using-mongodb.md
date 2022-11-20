@@ -29,7 +29,9 @@ Because version on my arm64v8 processor now coz 5.* and above are not supported 
 - **MongoDB 4.4.18 Released on November 15, 2022**: [Click here](https://www.mongodb.com/docs/manual/release-notes/4.4)
 
 
-## Installing mongodb on host systmem (notice the guid has both `focal` and `jammy` installation instructions below)
+## Installing mongodb on host systmem (NOT RECOMMENDED)
+
+Notice the guid has both `focal` and `jammy` installation instructions below.
 
 Official Guide of Install: [Click here](https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/)
 
