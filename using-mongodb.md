@@ -57,10 +57,9 @@ mongo -u "root" -p "root"
 ```js
 
 // USING MONGO SHELL TO CREATING USER with (username,password)=(sahil,lihas)
-
 // *NOTE*: Switching to admin database is *NECESSARY* becoz only then we can create user. Source: https://stackoverflow.com/a/65266251/10012446
 use admin
-
+// Use createUser function to create user with given roles
 db.createUser(
 	{
 		user: "sahil",
@@ -69,10 +68,12 @@ db.createUser(
 	}
 )
 
-# SHOW CURRENT USER INFORMATION IN MONGO SHELL
+
+// SHOW CURRENT USER INFORMATION IN MONGO SHELL
 db.runCommand({connectionStatus : 1})
 
-# REMOVE USER
+
+// REMOVE USER
 db.removeUser("UsernName")
 
 # EXIT SHELL
