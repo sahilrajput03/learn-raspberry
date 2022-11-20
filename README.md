@@ -14,7 +14,7 @@ Some saved info about the device.
 
   ![image](https://user-images.githubusercontent.com/31458531/202855580-b86bff0f-1ad3-4317-b70a-ddedf5840c73.png)
 
-# Installation of ubuntu server s
+# Installation of ubuntu server
 
 - Install the Ubuntu Server 64 bit using **Raspberry Pi Imager** tool (you can simply choose from the list and it'll download from internet automatically).
 - Insert memcard to raspberry pi and also plug ethernet cable to it to connect to router.
