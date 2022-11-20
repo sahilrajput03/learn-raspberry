@@ -74,7 +74,7 @@ db.removeUser("UsernName")
 exit
 ```
 
-Also, non authenticated users would see such error when trying to insert documents
+**Also, non authenticated users would see such error when trying to insert documents:**
 
 ![image](https://user-images.githubusercontent.com/31458531/202909615-fea3765e-bd35-4cf2-89e8-93712aa3d696.png)
 
