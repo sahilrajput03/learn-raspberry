@@ -45,6 +45,11 @@ sudo docker run --name mongo -d -p 27017:27017 -v /home/ubuntu/mongo-with-docker
 # NOW BELOW COMMAND SHOULD BE HELP TO CONNECT
 mongo -u "root" -p "root"
 
+# YOU CAN LOGIN IN THE SHELL
+mongo
+# now in shell you can authenticate by:
+db.auth('root', 'root')
+
 # CONNECTION COMMAND
 # mongo -u "root" -p "root" --host 192.168.18.13
 # mongodb://root:root@192.168.18.13:27017/
