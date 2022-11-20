@@ -76,7 +76,8 @@ db.runCommand({connectionStatus : 1})
 // REMOVE USER
 db.removeUser("UsernName")
 
-# EXIT SHELL
+
+// EXIT SHELL
 exit
 ```
 
