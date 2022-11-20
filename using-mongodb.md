@@ -17,6 +17,8 @@ sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo --restart alwa
 
 ## TESTING WITH AUTH ENABLED (DID NOT WORK COZ WE CAN"T CREATE CREDENTAILS FOR ADMIN NOW AT ALL)
 ## sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo --restart always arm64v8/mongo:4.4.18 --auth
+## sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo --restart always -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=rootpassword arm64v8/mongo:4.4.18 --auth
+
 
 ## TESTING WITH CUSTOM CONFIG FILE
 docker run --name mongo -v "$(pwd)"/etc/mongod.conf:/etc/mongo/mongod.conf -d --restart always arm64v8/mongo:4.4.18 --config /etc/mongo/mongod.conf
