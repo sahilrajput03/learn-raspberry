@@ -35,6 +35,24 @@ mongo mynotifyservice.ddns.net:27017
 *Fyi:(\*not tested yet\*) You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.*
 
 
+## Securing and user management with mongodb
+
+The three roles listed give the `admin` user the ability to administer all user accounts and data in MongoDB. Make sure your password is secure.
+
+```bash
+use admin
+db.createUser(
+	{
+		user: "admin",
+		pwd: "pi@01iiadnuyh@pi",
+		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]
+	}
+)
+exit
+
+```
+
+
 ## Why I must install 4.* only (and NOT version 5.x or 6.x of mongodb)?
 
 Because version on my arm64v8 processor now coz 5.* and above are not supported currently. **So I am using tag 4.4.18 <which is most recent supported version for arm64v8 processors>.**
