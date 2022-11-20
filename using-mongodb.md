@@ -48,6 +48,7 @@ mongo -u "root" -p "root"
 # YOU CAN LOGIN IN THE SHELL
 mongo
 # now in shell you can authenticate by:
+use admin // change to admin DB
 db.auth('root', 'root')
 
 # CONNECTION COMMAND
