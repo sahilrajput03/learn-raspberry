@@ -16,7 +16,14 @@ sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo:
 sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo --restart always arm64v8/mongo:4.4.18
 
 # verify container details
-docker ps
+docker ps -a
+
+# start the stopped container (name=mongo becoz we set that earlier)
+docker start mongo
+
+# update container's restart policy
+docker update --restart always mongo
+
 ```
 
 *Fyi:(\*not tested yet\*) You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.*
