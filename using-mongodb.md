@@ -20,14 +20,16 @@ docker ps
 sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic
 ```
 
-## I must install 4.*? version on my arm64v8 processor now coz 5.* and above are not supported currently
+## Why I must install 4.* only (and NOT version 5.x or 6.x of mongodb)?
+
+Because version on my arm64v8 processor now coz 5.* and above are not supported currently
 
 ![image](https://user-images.githubusercontent.com/31458531/202874252-72f266a0-518f-4e26-9050-281a12f50854.png)
 
 - **MongoDB 4.4.18 Released on November 15, 2022**: [Click here](https://www.mongodb.com/docs/manual/release-notes/4.4)
 
 
-## Installing mongodb
+## Installing mongodb on host systmem (notice the guid has both `focal` and `jammy` installation instructions below)
 
 Official Guide of Install: [Click here](https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/)
 
