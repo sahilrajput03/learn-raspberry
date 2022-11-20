@@ -18,7 +18,7 @@ sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo arm64v8/mongo:
 docker ps
 ```
 
-*Fyi: You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.*
+*Fyi:(\*not tested yet\*) You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.*
 
 
 ## Why I must install 4.* only (and NOT version 5.x or 6.x of mongodb)?
