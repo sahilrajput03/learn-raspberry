@@ -51,7 +51,6 @@ mongo -u "root" -p "root"
 ```
 
 ```js
-
 // CREATING USER WITH USING MONGO SHELL (username,password)=(sahil,lihas)
 // *NOTE*: Switching to admin database is *NECESSARY* becoz only then we can create user. Source: https://stackoverflow.com/a/65266251/10012446
 use admin
@@ -65,13 +64,15 @@ db.createUser(
 )
 
 
+// LEARN: Each database has its own roles
+
 // SHOW CURRENT USER INFORMATION IN MONGO SHELL
 db.runCommand({connectionStatus : 1})
 
 // SHOW USERS (*Another*)
-use admin // change to admin db
-show users // show users collection
-show roles // show available roles
+use admin // change to admin DB
+show users // show users collection for admin DB; OR you can use `db.getUsers()` as well
+show roles // show available roles for admin DB
 
 
 // REMOVE USER
