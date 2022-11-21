@@ -74,6 +74,8 @@ db.createUser(
 	}
 )
 
+// CHANGE PASSWORD FOR A USER
+db.changeUserPassword('sahil', 'sahil')
 
 // LEARN: Each database has its own roles
 
