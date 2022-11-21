@@ -37,7 +37,8 @@ docker start mongo
 docker update --restart always mongo
 
 # connecting to mongo db from remote pc
-mongo 'YOUR-RPI-IP-ADDRESS'
+mongo 'YOUR-RPI-IP-ADDRESS' // database is `test` by default
+mongo 'YOUR-RPI-IP-ADDRESS/dbName'
 mongo --host 'YOUR-RPI-IP-ADDRESS'
 mongo mynotifyservice.ddns.net:27017
 ```
@@ -55,7 +56,10 @@ sudo docker run --name mongo -d -p 27017:27017 -v ~/data:/data/db -d --restart a
 # NOW BELOW COMMAND SHOULD BE HELP TO CONNECT
 mongo -u "root" -p "root"
 # CONNECT TO TARGET HOST WITH USER AUTHENTICATION, default database is `admin`. So, user in `admin` database
-mongo -u "root" -p "root" --host 192.168.18.13
+mongo -u "root" -p "root" 192.168.18.13
+# Same as above but connect to admin database (You can always change database inside shell via `use dbName` as well)
+mongo -u root -p root 192.168.18.13/admin
+
 # WHEN YOU WANT TO ENTER PASSWORD IN A SECURE PROMPT
 mongo -u "root" -p
 # WHEN YOU WANT TO LOGIN WITH A USER CREATED IN OTHER THAN `admin` DATABSE, for e.g., in `test` database
