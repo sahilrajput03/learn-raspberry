@@ -44,6 +44,8 @@ sudo docker run --name mongo -d -p 27017:27017 -v /home/ubuntu/mongo-with-docker
 
 # NOW BELOW COMMAND SHOULD BE HELP TO CONNECT
 mongo -u "root" -p "root"
+# When you want to enter password in secret prompt
+mongo -u "root" -p
 
 # YOU CAN LOGIN IN THE SHELL
 mongo
