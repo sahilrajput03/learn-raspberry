@@ -131,7 +131,7 @@ db.createUser(
 		roles: [ "readWrite" ]
 	}
 )
-// CONNECTO USING MONGO SHELL: mongo -u tokyo -p tokyo 192.168.18.13/car --authenticationDatabase car
+// CONNECT USING MONGO SHELL: mongo -u tokyo -p tokyo 192.168.18.13/car --authenticationDatabase car
 // CONNECTION STRING MongoDB COMPASS: mongodb://tokyo:tokyo@192.168.18.13:27017/car?authSource=car
 
 
