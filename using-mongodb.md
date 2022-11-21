@@ -146,7 +146,7 @@ db.createUser(
 // Connectin via new user `tokyo` with password `tokyo` using authenticatoion db `car` with mongo shell
 mongo -u tokyo -p tokyo --host 192.168.18.13 --authenticationDatabase car
 // Connection string MongoDB COMPASS
-mongodb://tokyo:tokyo@192.168.18.13:27017/?authSource=car
+mongodb://tokyo:tokyo@192.168.18.13:27017/car?authSource=car
 
 // Insert a document to car database
 use car
