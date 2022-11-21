@@ -88,14 +88,26 @@ db.createUser(
 	}
 )
 
-// Use createUser function to create another user with given roles
+// ADD A ADMIN PRIVILIDGED USER `sahil` DATABASE
 db.createUser(
 	{
 		user: "sahil",
-		pwd: "lihas",
-		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]
+		pwd: "sahil",
+		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"] // creating master user by using such roles
+	})
+
+// ADD A GLOBAL USER TO HAVE READ/WRITE ACCESS TO DATABASE DB1 AND DB2.
+db.createUser(
+	{
+		user: "mohit",
+		pwd: "mohit",
+		roles: [
+			{ role: "readWrite", db: "db1" }, // providing readWrite access to db1
+			{ role: "readWrite", db: "db2" }  // providing readWrite access to db2
+		]
 	}
 )
+
 
 // CHANGE PASSWORD FOR A USER
 db.changeUserPassword('sahil', 'sahil')
