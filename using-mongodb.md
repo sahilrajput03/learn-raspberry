@@ -98,6 +98,8 @@ db.createUser(
 		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]
 	}
 )
+// CONNECT USING MONGO SHELL: mongo -u admin -p admin 192.168.18.13/db1 (you may change db later via `use db1` and check selected by via `db` command)
+// CONNECT USING CONNECTING STRING USING MongoDB COMPASS: mongodb://admin:admin@192.168.18.13:27017/db1
 
 // ADD ANOTHER ADMIN PRIVILIDGED USER `sahil` to admin DATABASE (Adding multiple admin users is beneficial coz we might want to provide admin access to different people but consider a situation you want to revoke access from that peron so in that cause you can simply remove this user)
 use admin
@@ -107,6 +109,8 @@ db.createUser(
 		pwd: "sahil",
 		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"] // creating master user by using such roles
 	})
+// CONNECT USING MONGO SHELL: mongo -u sahil -p sahil 192.168.18.13/db1 (you may change db later via `use db1` and check selected by via `db` command)
+// CONNECT USING CONNECTING STRING USING MongoDB COMPASS: mongodb://sahil:sahil@192.168.18.13:27017/db1
 
 
 // ADD A GLOBAL USER TO HAVE READ/WRITE ACCESS TO DATABASE DB1 AND DB2. (GLOBAL as we are adding this user to the admin database itself)
@@ -121,6 +125,8 @@ db.createUser(
 		]
 	}
 )
+// CONNECT USING MONGO SHELL: mongo -u mohit -p mohit 192.168.18.13/db1 (you may change db later via `use db2` and check selected by via `db` command)
+// CONNECT USING CONNECTING STRING USING MongoDB COMPASS: mongodb://mohit:mohit@192.168.18.13:27017/db1
 
 // CREATING USER IN car DATABASE AND ASSIGNING READ/WRITE ACCESS TO IT BY GIVING IT `readWrite` ROLE
 use car
@@ -132,7 +138,7 @@ db.createUser(
 	}
 )
 // CONNECT USING MONGO SHELL: mongo -u tokyo -p tokyo 192.168.18.13/car --authenticationDatabase car
-// CONNECTION STRING MongoDB COMPASS: mongodb://tokyo:tokyo@192.168.18.13:27017/car?authSource=car
+// CONNECT USING CONNECTING STRING USING MongoDB COMPASS: mongodb://tokyo:tokyo@192.168.18.13:27017/car?authSource=car
 
 
 // INSERT DOCUMENT TO car DATABASE
