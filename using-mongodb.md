@@ -66,7 +66,7 @@ db.auth('root', 'root')
 ```
 
 - `db.createUser()` API: [Click here](https://www.mongodb.com/docs/manual/reference/method/db.createUser/)
-User Authentication in mongodb: Source - [ MongoDB 4 ] Configuring authentication, users and roles in MongoDB: [Youtube](https://www.youtube.com/watch?v=SY_9zwb29LA)
+- User Authentication in mongodb: Source - [ MongoDB 4 ] Configuring authentication, users and roles in MongoDB: [Youtube](https://www.youtube.com/watch?v=SY_9zwb29LA)
 
 ```js
 // CREATING A USER IN `admin` DB USING MONGO SHELL (username,password)=(sahil,lihas)
