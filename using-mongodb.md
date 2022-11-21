@@ -99,7 +99,7 @@ db.createUser(
 	}
 )
 
-// ADD A ADMIN PRIVILIDGED USER `sahil` to admin DATABASE
+// ADD ANOTHER ADMIN PRIVILIDGED USER `sahil` to admin DATABASE (Adding multiple admin users is beneficial coz we might want to provide admin access to different people but consider a situation you want to revoke access from that peron so in that cause you can simply remove this user)
 use admin
 db.createUser(
 	{
