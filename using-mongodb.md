@@ -44,22 +44,22 @@ sudo docker run --name mongo -d -p 27017:27017 -v /home/ubuntu/mongo-with-docker
 
 # NOW BELOW COMMAND SHOULD BE HELP TO CONNECT
 mongo -u "root" -p "root"
-# When you want to enter password in secret prompt
+# CONNECT TO TARGET HOST
+mongo -u "root" -p "root" --host 192.168.18.13
+# WHEN YOU WANT TO ENTER PASSWORD IN A SECURE PROMPT
 mongo -u "root" -p
+# USING CONNECTION STRING
+mongo mongodb://root:root@192.168.18.13:27017/
 
 # YOU CAN LOGIN IN THE SHELL
 mongo
 # now in shell you can authenticate by:
 use admin // change to admin DB
 db.auth('root', 'root')
-
-# CONNECTION COMMAND
-# mongo -u "root" -p "root" --host 192.168.18.13
-# mongodb://root:root@192.168.18.13:27017/
 ```
 
 ```js
-// CREATING USER WITH USING MONGO SHELL (username,password)=(sahil,lihas)
+// CREATING A USER IN `admin` DB USING MONGO SHELL (username,password)=(sahil,lihas)
 // *NOTE*: Switching to admin database is *NECESSARY* becoz only then we can create user. Source: https://stackoverflow.com/a/65266251/10012446
 use admin
 // Use createUser function to create user with given roles
