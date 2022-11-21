@@ -82,9 +82,9 @@ db.auth('root', 'root')
 
 
 ```js
-// CREATING A USER IN `admin` DB USING MONGO SHELL (username,password)=(sahil,lihas)
+// **LEARN: Each database has its own roles and users**
 
-// Get selected db (Expected Ouput: `admin` if you specify database name while connecting to mongodb server)
+// Get selected db (Expected Ouput: `admin` if you had specified database name while connecting to mongodb server)
 db
 
 // *NOTE*: Switching to admin database is *NECESSARY* becoz only then we can create user. Source: https://stackoverflow.com/a/65266251/10012446
@@ -142,9 +142,7 @@ db.bar.insert({name: "Sahil Rajput"})
 // CHANGE PASSWORD FOR A USER
 db.changeUserPassword('sahil', 'sahil')
 
-// LEARN: Each database has its own roles
-
-// SHOW USERS and ROLES
+// SHOW USERS and ROLES (Each database has its own roles and users)
 use admin // change to admin DB
 // Get available roles for currently selected database i.e, admin
 show roles
