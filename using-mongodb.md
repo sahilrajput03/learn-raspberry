@@ -96,7 +96,7 @@ db.createUser(
 		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"] // creating master user by using such roles
 	})
 
-// ADD A GLOBAL USER TO HAVE READ/WRITE ACCESS TO DATABASE DB1 AND DB2.
+// ADD A GLOBAL USER TO HAVE READ/WRITE ACCESS TO DATABASE DB1 AND DB2. (GLOBAL as we are adding this user to the admin database itself)
 db.createUser(
 	{
 		user: "mohit",
