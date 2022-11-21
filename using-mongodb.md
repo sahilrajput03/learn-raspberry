@@ -148,6 +148,11 @@ mongo -u tokyo -p tokyo --host 192.168.18.13 --authenticationDatabase car
 // Connection string MongoDB COMPASS
 mongodb://tokyo:tokyo@192.168.18.13:27017/?authSource=car
 
+// Insert a document to car database
+use car
+db.bar.insert({name: "Sahil Rajput"})
+
+
 // CHANGE PASSWORD FOR A USER
 db.changeUserPassword('tokyo', 'tokyo2')
 ```
