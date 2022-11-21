@@ -139,7 +139,7 @@ exit
 - `viewUser`
 
 ```
-// CREATING USER IN non `admin` database and assigning read/write access to it
+// CREATING USER IN general user and assigning read/write access to it by giving `readWrite` role
 
 // switch to DB car
 use car
@@ -147,20 +147,19 @@ use car
 // Use createUser function to create another user with given roles
 db.createUser(
 	{
-		user: "sahil",
-		pwd: "lihas",
+		user: "tokyo",
+		pwd: "tokyo",
 		roles: [ "readWrite" ]
 	}
 )
 
+// Connectin via new user `tokyo` with password `tokyo` using authenticatoion db `car` with mongo shell
+mongo -u tokyo -p tokyo --host 192.168.18.13 --authenticationDatabase car
+// Connection string MongoDB COMPASS
+mongodb://tokyo:tokyo@192.168.18.13:27017/?authSource=car
+
 // CHANGE PASSWORD FOR A USER
-db.changeUserPassword('sahil', 'sahil')
-
-// Connection string MongoDB Compass
-mongodb://sahil:lihas@192.168.18.13:27017/?authSource=car
-
-mongo 
-
+db.changeUserPassword('tokyo', 'tokyo2')
 ```
 
 *Fyi:(\*not tested yet\*) You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.*
