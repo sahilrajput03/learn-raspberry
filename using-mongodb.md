@@ -48,6 +48,8 @@ mongo -u "root" -p "root"
 mongo -u "root" -p "root" --host 192.168.18.13
 # WHEN YOU WANT TO ENTER PASSWORD IN A SECURE PROMPT
 mongo -u "root" -p
+# WHEN YOU WANT TO LOGIN WITH A USER CREATED IN OTHER THAN `admin` DATABSE, for e.g., in `test` database
+mongo -u "root" -p "root" --host 192.168.18.13 --authenticationDatabase test
 # USING CONNECTION STRING
 mongo mongodb://root:root@192.168.18.13:27017/
 
