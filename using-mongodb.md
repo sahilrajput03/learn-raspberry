@@ -61,6 +61,8 @@ use admin // change to admin DB
 db.auth('root', 'root')
 ```
 
+User Authentication in mongodb: Source - [Youtube](https://www.youtube.com/watch?v=SY_9zwb29LA)
+
 ```js
 // CREATING A USER IN `admin` DB USING MONGO SHELL (username,password)=(sahil,lihas)
 // *NOTE*: Switching to admin database is *NECESSARY* becoz only then we can create user. Source: https://stackoverflow.com/a/65266251/10012446
