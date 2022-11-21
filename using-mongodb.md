@@ -4,6 +4,7 @@ TODO:
 - **AMAZING: [ MongoDB 5 ] Backup & Restore MongoDB database: [Click here](https://www.youtube.com/watch?v=AsNeE_95QBA)**
 - [ MongoDB 6 ] How to Deploy a MongoDB ReplicaSet: [Click here](https://www.youtube.com/watch?v=Q2lJH156SUQ)
 - [ MongoDB 7 ] Set up Sharding in MongoDB using Docker containers: [Click here](https://www.youtube.com/watch?v=7Lp6R4CmuKE)
+- [ MongoDB 8 ] Adding a shard to sharded cluster: [Click here](https://www.youtube.com/watch?v=LGERGvEaPW0)
 
 We can benefit from replica sets for load distribution by making a setup like that so taht reads are piped to one of secondary replica but write will only go to the primary replica always:
 
