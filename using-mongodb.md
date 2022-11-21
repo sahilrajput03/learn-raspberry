@@ -78,6 +78,9 @@ db.auth('root', 'root')
 - `db.createUser()` API: [Click here](https://www.mongodb.com/docs/manual/reference/method/db.createUser/)
 - User Authentication in mongodb: Source - [ MongoDB 4 ] Configuring authentication, users and roles in MongoDB: [Youtube](https://www.youtube.com/watch?v=SY_9zwb29LA)
 
+**The three roles listed give the `admin` user the ability to administer all user accounts and data in MongoDB. Make sure your password is secure.**
+
+
 ```js
 // CREATING A USER IN `admin` DB USING MONGO SHELL (username,password)=(sahil,lihas)
 
@@ -85,18 +88,19 @@ db.auth('root', 'root')
 db
 
 // *NOTE*: Switching to admin database is *NECESSARY* becoz only then we can create user. Source: https://stackoverflow.com/a/65266251/10012446
-use admin
 
-// Use createUser function to create admin user with given roles
+// Use createUser function to create admin user with given roles to admin DATABASE
+use admin
 db.createUser(
 	{
 		user: "admin",
-		pwd: "secretPasswordHere",
+		pwd: "admin",
 		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]
 	}
 )
 
-// ADD A ADMIN PRIVILIDGED USER `sahil` DATABASE
+// ADD A ADMIN PRIVILIDGED USER `sahil` to admin DATABASE
+use admin
 db.createUser(
 	{
 		user: "sahil",
@@ -104,7 +108,9 @@ db.createUser(
 		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"] // creating master user by using such roles
 	})
 
+
 // ADD A GLOBAL USER TO HAVE READ/WRITE ACCESS TO DATABASE DB1 AND DB2. (GLOBAL as we are adding this user to the admin database itself)
+use admin
 db.createUser(
 	{
 		user: "mohit",
@@ -116,6 +122,22 @@ db.createUser(
 	}
 )
 
+// Creating user in particular database i.e, car and assigning read/write access to it by giving `readWrite` role
+use car
+db.createUser(
+	{
+		user: "tokyo",
+		pwd: "tokyo",
+		roles: [ "readWrite" ]
+	}
+)
+// CONNECTO USING MONGO SHELL: mongo -u tokyo -p tokyo 192.168.18.13/car --authenticationDatabase car
+// CONNECTION STRING MongoDB COMPASS: mongodb://tokyo:tokyo@192.168.18.13:27017/car?authSource=car
+
+
+// INSERT DOCUMENT TO car DATABASE
+use car
+db.bar.insert({name: "Sahil Rajput"})
 
 // CHANGE PASSWORD FOR A USER
 db.changeUserPassword('sahil', 'sahil')
@@ -144,35 +166,6 @@ exit
 
 ![image](https://user-images.githubusercontent.com/31458531/202909615-fea3765e-bd35-4cf2-89e8-93712aa3d696.png)
 
-```
-// Creating user in particular database i.e, car and assigning read/write access to it by giving `readWrite` role
-
-// switch to DB car
-use car
-
-// Use createUser function to create another user with given roles
-db.createUser(
-	{
-		user: "tokyo",
-		pwd: "tokyo",
-		roles: [ "readWrite" ]
-	}
-)
-
-// Connectin via new user `tokyo` with password `tokyo` using authenticatoion db `car` with mongo shell
-mongo -u tokyo -p tokyo 192.168.18.13/car --authenticationDatabase car
-// Connection string MongoDB COMPASS
-mongodb://tokyo:tokyo@192.168.18.13:27017/car?authSource=car
-
-// Insert a document to car database
-use car
-db.bar.insert({name: "Sahil Rajput"})
-
-
-// CHANGE PASSWORD FOR A USER
-db.changeUserPassword('tokyo', 'tokyo2')
-```
-
 **Roles**
 
 - `dbAdmin`: Provides the ability to perform administrative tasks such as schema-related tasks, indexing, and gathering statistics. This role does not grant privileges for user and role management. Read more: https://www.mongodb.com/docs/manual/reference/built-in-roles/#mongodb-authrole-dbAdmin
@@ -186,24 +179,6 @@ db.changeUserPassword('tokyo', 'tokyo2')
 
 
 *Fyi:(\*not tested yet\*) You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.*
-
-
-## Securing and user management with mongodb
-
-The three roles listed give the `admin` user the ability to administer all user accounts and data in MongoDB. Make sure your password is secure.
-
-```bash
-use admin
-db.createUser(
-	{
-		user: "admin",
-		pwd: "myAdminPassword",
-		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]
-	}
-)
-exit
-
-```
 
 
 ## Why I must install 4.* only (and NOT version 5.x or 6.x of mongodb)?
