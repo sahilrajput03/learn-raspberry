@@ -117,30 +117,26 @@ exit
 
 ![image](https://user-images.githubusercontent.com/31458531/202909615-fea3765e-bd35-4cf2-89e8-93712aa3d696.png)
 
-
-
 **Roles**
 
-- dbAdmin: Provides the ability to perform administrative tasks such as schema-related tasks, indexing, and gathering statistics. This role does not grant privileges for user and role management. Read more: https://www.mongodb.com/docs/manual/reference/built-in-roles/#mongodb-authrole-dbAdmin
-- readWrite: Provides all the privileges of the read role plus ability to modify data on all non-system collections and the system.js collection.
-- userAdmin: Provides the ability to create and modify roles and users on the current database. Since the userAdmin role allows users to grant any privilege to any user, including themselves, the role also indirectly provides superuser access to either the database or, if scoped to the admin database, the cluster.
-- dbOwner: ( dbOwner = dbAdmin + readWrite + userAdmin): The database owner can perform any administrative action on the database. This role combines the privileges granted by the readWrite , dbAdmin and userAdmin roles. WARNING: It is important to understand the security implications of granting the userAdmin role: a user with this role for a database can assign themselves any privilege on that database. Granting the userAdmin role on the admin database has further security implications as this indirectly provides superuser access to a cluster. With admin scope a user with the userAdmin role can grant cluster-wide roles or privileges including userAdminAnyDatabase.
-- read: Provides the ability to read data on all non-system collections and the system.js collection. 
+- `dbAdmin`: Provides the ability to perform administrative tasks such as schema-related tasks, indexing, and gathering statistics. This role does not grant privileges for user and role management. Read more: https://www.mongodb.com/docs/manual/reference/built-in-roles/#mongodb-authrole-dbAdmin
+- `readWrite`: Provides all the privileges of the read role plus ability to modify data on all non-system collections and the system.js collection.
+- `userAdmin`: Provides the ability to create and modify roles and users on the current database. Since the userAdmin role allows users to grant any privilege to any user, including themselves, the role also indirectly provides superuser access to either the database or, if scoped to the admin database, the cluster.
+- `dbOwner`: ( dbOwner = dbAdmin + readWrite + userAdmin): The database owner can perform any administrative action on the database. This role combines the privileges granted by the readWrite , dbAdmin and userAdmin roles. WARNING: It is important to understand the security implications of granting the userAdmin role: a user with this role for a database can assign themselves any privilege on that database. Granting the userAdmin role on the admin database has further security implications as this indirectly provides superuser access to a cluster. With admin scope a user with the userAdmin role can grant cluster-wide roles or privileges including userAdminAnyDatabase.
+- `read`: Provides the ability to read data on all non-system collections and the system.js collection. 
 
-**MORE:**
-
-The userAdmin role explicitly provides the following actions:
-	- changeCustomData
-	- changePassword
-	- createRole
-	- createUser
-	- dropRole
-	- dropUser
-	- grantRole
-	- revokeRole
-	- setAuthenticationRestriction
-	- viewRole
-	- viewUser
+**The `userAdmin` role explicitly provides the following actions:**
+- `changeCustomData`
+- `changePassword`
+- `createRole`
+- `createUser`
+- `dropRole`
+- `dropUser`
+- `grantRole`
+- `revokeRole`
+- `setAuthenticationRestriction`
+- `viewRole`
+- `viewUser`
 
 *Fyi:(\*not tested yet\*) You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.*
 
