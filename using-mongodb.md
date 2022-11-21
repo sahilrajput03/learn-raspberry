@@ -63,7 +63,7 @@ mongo -u "root" -p "root" --host 192.168.18.13 --authenticationDatabase test
 # USING CONNECTION STRING
 mongo mongodb://root:root@192.168.18.13:27017/
 
-# MANULA LOGIN IN MONGO SHELL
+# MANUAL LOGIN IN MONGO SHELL
 # STEP1: connect to mongo shell first
 mongo
 # STEP2: Now in shell you can authenticate by:
@@ -76,6 +76,10 @@ db.auth('root', 'root')
 
 ```js
 // CREATING A USER IN `admin` DB USING MONGO SHELL (username,password)=(sahil,lihas)
+
+// Get selected db (Expected Ouput: `admin` if you specify database name while connecting to mongodb server)
+db
+
 // *NOTE*: Switching to admin database is *NECESSARY* becoz only then we can create user. Source: https://stackoverflow.com/a/65266251/10012446
 use admin
 
