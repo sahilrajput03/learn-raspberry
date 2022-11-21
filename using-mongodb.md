@@ -164,7 +164,7 @@ use admin
 db.createUser(
 	{
 		user: "admin",
-		pwd: "pi@01iiadnuyh@pi",
+		pwd: "myAdminPassword",
 		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]
 	}
 )
