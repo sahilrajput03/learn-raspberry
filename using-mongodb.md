@@ -1,5 +1,9 @@
 # Install mongodb
 
+TODO:
+- [ MongoDB 5 ] Backup & Restore MongoDB database: [Click here](https://www.youtube.com/watch?v=AsNeE_95QBA)
+- [ MongoDB 6 ] How to Deploy a MongoDB ReplicaSet: [Click here](https://www.youtube.com/watch?v=Q2lJH156SUQ)
+
 ## install mongodb's docker image
 
 - Official Article: Installing mongodb on 64 bit raspberry processor: [Click here ](https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/)
