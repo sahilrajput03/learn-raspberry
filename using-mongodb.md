@@ -126,17 +126,7 @@ exit
 - `read`: Provides the ability to read data on all non-system collections and the system.js collection. 
 
 **The `userAdmin` role explicitly provides the following actions:**
-- `changeCustomData`
-- `changePassword`
-- `createRole`
-- `createUser`
-- `dropRole`
-- `dropUser`
-- `grantRole`
-- `revokeRole`
-- `setAuthenticationRestriction`
-- `viewRole`
-- `viewUser`
+- `changeCustomData`, `changePassword`, `createRole`, `createUser`, `dropRole`, `dropUser`, `grantRole`, `revokeRole`, `setAuthenticationRestriction`, `viewRole` and `viewUser` role.
 
 ```
 // Creating general user and assigning read/write access to it by giving `readWrite` role
