@@ -4,6 +4,11 @@ TODO:
 - **AMAZING: [ MongoDB 5 ] Backup & Restore MongoDB database: [Click here](https://www.youtube.com/watch?v=AsNeE_95QBA)**
 - [ MongoDB 6 ] How to Deploy a MongoDB ReplicaSet: [Click here](https://www.youtube.com/watch?v=Q2lJH156SUQ)
 
+We can benefit from replica sets for load distribution by making a setup like that so taht reads are piped to one of secondary replica but write will only go to the primary replica always:
+
+	![image](https://user-images.githubusercontent.com/31458531/203150245-ac8c680c-9bbe-4585-94ee-a0472c015f64.png)
+
+
 ## install mongodb's docker image
 
 - Official Article: Installing mongodb on 64 bit raspberry processor: [Click here ](https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/)
