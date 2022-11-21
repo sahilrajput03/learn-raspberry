@@ -44,7 +44,7 @@ sudo docker run --name mongo -d -p 27017:27017 -v /home/ubuntu/mongo-with-docker
 
 # NOW BELOW COMMAND SHOULD BE HELP TO CONNECT
 mongo -u "root" -p "root"
-# CONNECT TO TARGET HOST
+# CONNECT TO TARGET HOST WITH USER AUTHENTICATION, default database is `admin`. So, user in `admin` database
 mongo -u "root" -p "root" --host 192.168.18.13
 # WHEN YOU WANT TO ENTER PASSWORD IN A SECURE PROMPT
 mongo -u "root" -p
