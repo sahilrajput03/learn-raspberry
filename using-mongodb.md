@@ -62,8 +62,8 @@ mongo -u root -p root 192.168.18.13/admin
 
 # WHEN YOU WANT TO ENTER PASSWORD IN A SECURE PROMPT
 mongo -u "root" -p
-# WHEN YOU WANT TO LOGIN WITH A USER CREATED IN OTHER THAN `admin` DATABSE, for e.g., in `test` database
-mongo -u "root" -p "root" --host 192.168.18.13 --authenticationDatabase test
+# WHEN YOU WANT TO LOGIN WITH A USER CREATED IN OTHER THAN `admin` DATABSE, for e.g., in `car` database
+mongo -u "root" -p "root" 192.168.18.13/car --authenticationDatabase test
 # USING CONNECTION STRING
 mongo mongodb://root:root@192.168.18.13:27017/
 
@@ -171,7 +171,7 @@ db.createUser(
 )
 
 // Connectin via new user `tokyo` with password `tokyo` using authenticatoion db `car` with mongo shell
-mongo -u tokyo -p tokyo --host 192.168.18.13 --authenticationDatabase car
+mongo -u tokyo -p tokyo 192.168.18.13/car --authenticationDatabase car
 // Connection string MongoDB COMPASS
 mongodb://tokyo:tokyo@192.168.18.13:27017/car?authSource=car
 
