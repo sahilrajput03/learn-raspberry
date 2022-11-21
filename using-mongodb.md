@@ -107,7 +107,7 @@ db.runCommand({connectionStatus : 1}) // same as above
 
 
 // REMOVE USER
-db.removeUser("UsernName")
+db.dropUser("UsernName") // previously: db.removeUser("UsernName")
 
 
 // EXIT SHELL
