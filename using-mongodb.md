@@ -122,7 +122,7 @@ db.createUser(
 	}
 )
 
-// Creating user in particular database i.e, car and assigning read/write access to it by giving `readWrite` role
+// CREATING USER IN car DATABASE AND ASSIGNING READ/WRITE ACCESS TO IT BY GIVING IT `readWrite` ROLE
 use car
 db.createUser(
 	{
