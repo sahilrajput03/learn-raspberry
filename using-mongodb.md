@@ -65,7 +65,17 @@ db.auth('root', 'root')
 // CREATING A USER IN `admin` DB USING MONGO SHELL (username,password)=(sahil,lihas)
 // *NOTE*: Switching to admin database is *NECESSARY* becoz only then we can create user. Source: https://stackoverflow.com/a/65266251/10012446
 use admin
-// Use createUser function to create user with given roles
+
+// Use createUser function to create admin user with given roles
+db.createUser(
+	{
+		user: "admin",
+		pwd: "secretPasswordHere",
+		roles: [ "userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]
+	}
+)
+
+// Use createUser function to create another user with given roles
 db.createUser(
 	{
 		user: "sahil",
