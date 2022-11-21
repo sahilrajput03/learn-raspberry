@@ -51,9 +51,10 @@ mongo -u "root" -p
 # USING CONNECTION STRING
 mongo mongodb://root:root@192.168.18.13:27017/
 
-# YOU CAN LOGIN IN THE SHELL
+# MANULA LOGIN IN MONGO SHELL
+# STEP1: connect to mongo shell first
 mongo
-# now in shell you can authenticate by:
+# STEP2: Now in shell you can authenticate by:
 use admin // change to admin DB
 db.auth('root', 'root')
 ```
