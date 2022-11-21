@@ -77,13 +77,10 @@ db.createUser(
 
 // LEARN: Each database has its own roles
 
-// SHOW CURRENT USER INFORMATION IN MONGO SHELL
-db.runCommand({connectionStatus : 1})
-
 // SHOW USERS (*Another*)
 use admin // change to admin DB
-show users // show users collection for admin DB; OR you can use `db.getUsers()` as well
-show roles // show available roles for admin DB
+show users // show users collection for currently selected database i.e, admin DB; OR you can use `db.getUsers()` or `db.runCommand({connectionStatus : 1})`
+show roles // show available roles for currently selected database i.e, DB
 
 
 // REMOVE USER
