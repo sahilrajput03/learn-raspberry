@@ -43,8 +43,11 @@ mongo mynotifyservice.ddns.net:27017
 ```
 
 ```bash
-# DOCKER DB CREATION COMMAND
-sudo docker run --name mongo -d -p 27017:27017 -v /home/ubuntu/mongo-with-docker/etc/mongo/mongod.conf:/etc/mongod.conf.orig -d --restart always -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=root arm64v8/mongo:4.4.18
+# DOCKER DB CREATION COMMAND (with config file, I didn't test the config file working though but it should work IMO ~sahil)
+sudo docker run --name mongo -d -p 27017:27017 -v ~/data:/data/db -v /home/ubuntu/mongo-with-docker/etc/mongo/mongod.conf:/etc/mongod.conf.orig -d --restart always -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=root arm64v8/mongo:4.4.18
+# DOCKER DB CREATION COMMAND (CURRENT WORKS)
+sudo docker run --name mongo -d -p 27017:27017 -v ~/data:/data/db -d --restart always -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=root arm64v8/mongo:4.4.18
+
 
 # NOW BELOW COMMAND SHOULD BE HELP TO CONNECT
 mongo -u "root" -p "root"
