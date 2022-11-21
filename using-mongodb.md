@@ -6,7 +6,7 @@ TODO:
 
 We can benefit from replica sets for load distribution by making a setup like that so taht reads are piped to one of secondary replica but write will only go to the primary replica always:
 
-	![image](https://user-images.githubusercontent.com/31458531/203150245-ac8c680c-9bbe-4585-94ee-a0472c015f64.png)
+![image](https://user-images.githubusercontent.com/31458531/203150245-ac8c680c-9bbe-4585-94ee-a0472c015f64.png)
 
 
 ## install mongodb's docker image
