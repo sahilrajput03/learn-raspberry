@@ -77,10 +77,14 @@ db.createUser(
 
 // LEARN: Each database has its own roles
 
-// SHOW USERS (*Another*)
+// SHOW USERS and ROLES
 use admin // change to admin DB
-show users // show users collection for currently selected database i.e, admin DB; OR you can use `db.getUsers()` or `db.runCommand({connectionStatus : 1})`
-show roles // show available roles for currently selected database i.e, DB
+// Get available roles for currently selected database i.e, admin
+show roles
+// Get users for currently selected database i.e, admin
+show users
+db.getUsers() // same as above
+db.runCommand({connectionStatus : 1}) // same as above
 
 
 // REMOVE USER
