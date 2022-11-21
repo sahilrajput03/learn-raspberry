@@ -138,6 +138,31 @@ exit
 - `viewRole`
 - `viewUser`
 
+```
+// CREATING USER IN non `admin` database and assigning read/write access to it
+
+// switch to DB car
+use car
+
+// Use createUser function to create another user with given roles
+db.createUser(
+	{
+		user: "sahil",
+		pwd: "lihas",
+		roles: [ "readWrite" ]
+	}
+)
+
+// CHANGE PASSWORD FOR A USER
+db.changeUserPassword('sahil', 'sahil')
+
+// Connection string MongoDB Compass
+mongodb://sahil:lihas@192.168.18.13:27017/?authSource=car
+
+mongo 
+
+```
+
 *Fyi:(\*not tested yet\*) You can also use Ubuntu Bionic - LTS 18.04 image as well by using `sudo docker run -d -p 27017:27017 -v ~/data:/data/db --name mongo mongo:bionic`.*
 
 
