@@ -139,7 +139,7 @@ exit
 - `viewUser`
 
 ```
-// CREATING USER IN general user and assigning read/write access to it by giving `readWrite` role
+// Creating general user and assigning read/write access to it by giving `readWrite` role
 
 // switch to DB car
 use car
