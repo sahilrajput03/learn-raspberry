@@ -6,4 +6,4 @@ Source: Go to Manjaro Downloads page on the ARM Section: [Click here](https://ma
 
 ## Installation
 
-I am donwloading the Manjaro Gnome Desktop becoz its sweet to use.
+I am donwloading the Manjaro Gnome Desktop becoz its sweet to use. Size of image is **1.1 GB** only.
