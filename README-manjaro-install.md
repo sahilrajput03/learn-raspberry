@@ -11,7 +11,7 @@ I am donwloading the Manjaro Gnome Desktop becoz its sweet to use. Size of image
 1. Open `rpi imager`, navigate to **CHOOSE OS > Other General Purpose OS > Manjaro ARM Linux > Manjaro ARM Gnome 22.10 (Size is 1.1 GB)** FYI: `Manjaro Minimal` version has no desktop environment.
 2. Plug the memcard in raspberrypi and boot and connect to the display using your hdmi cable.
 3. Installation process: Quick Video Reference: [Click here for hindi](https://www.youtube.com/watch?v=tx7gvBcr5A4), [Click here](https://youtu.be/ozAWczLqsB4)
-4. TIMEZONE: Asia/Kolkata, Locale: en_IN, Keyboard Layout: us.
+4. TIMEZONE: **Asia/Kolkata**, Locale: **en_IN**, Keyboard Layout: **us**.
 
 For installation you would need credentials like that:
 
