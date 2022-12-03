@@ -6,4 +6,6 @@ Source: Go to Manjaro Downloads page on the ARM Section: [Click here](https://ma
 
 ## Installation
 
-I am donwloading the Manjaro Gnome Desktop becoz its sweet to use. Size of image is **1.1 GB** only.
+I am donwloading the Manjaro Gnome Desktop becoz its sweet to use. Size of image is **1.1 GB** only. BUT YOU DON'T NEED TO DOWNLOAD IT FROM HERE THOGUH COZ *rpi imager** will do this for us automatically.
+
+1. Open `rpi imager`, navigate to **CHOOSE OS > Other General Purpose OS > Manjaro ARM Linux > Manjaro ARM Gnome 22.10 (Size is 1.1 GB)**
