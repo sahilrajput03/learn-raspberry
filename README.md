@@ -69,3 +69,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 # or
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```
+
+## NOTE: Running react server i.e., `react-scripts` on raspberry pi is not reliable at all
+
+Becoz its too slow to run and changes made are even hiliariously slow. React server stared in 4 minutes for slasher frontend project. LOL.
