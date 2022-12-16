@@ -62,7 +62,10 @@ sudo usermod -aG docker $(whoami)
 
 ## Installing `nvm` on ubuntu server
 
+Src: [Click here](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 ```bash
-https://github.com/nvm-sh/nvm#installing-and-updating
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+# or
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 ```
