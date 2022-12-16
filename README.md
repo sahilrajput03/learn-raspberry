@@ -59,3 +59,10 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo bash get-docker.sh
 sudo usermod -aG docker $(whoami)
 ```
+
+## Installing `nvm` on ubuntu server
+
+
+```bash
+https://github.com/nvm-sh/nvm#installing-and-updating
+```
