@@ -28,8 +28,7 @@ Some saved info about the device.
 
 ```bash
 # tldr
-TODO:
-
+# UPDATED for ubuntu LTS server 22.04.03 LTS when I installed on raspberry pi on 19 Jan, 2024
 # Check if ssh is running on ubuntu
 service ssh status
 
