@@ -26,6 +26,25 @@ Some saved info about the device.
 
 ***FYI: There is an automated way of making the os connect to wifi automatically on the first start if you put your wifi SSID and password to the `network-config` [file as stated here in docs of mongodb](https://www.mongodb.com/developer/products/mongodb/mongodb-on-raspberry-pi/).***
 
+```bash
+# tldr
+TODO:
+
+# Check if ssh is running on ubuntu
+service ssh status
+
+# if ssh is not installed then follow below commands
+sudo apt update
+sudo apt install openssh-server
+
+systemctl status ssh
+# ssh service should be active
+
+# enable the service so it runs on startup
+systemctl enable ssh
+systemctl status ssh
+```
+
 1. Connecting to wifi: Install `nmtui` by command: `sudo apt install network-manager`.
 2. Now we enter password via the menu we see with `nmtui` program, its fun though and connect to wifi.
 3. Now we can remove the ethernet cable and just see the ip address the device gets from the same router's device page under `Wi-Fi devices` this time.
