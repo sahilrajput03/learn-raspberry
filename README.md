@@ -49,7 +49,13 @@ Host key for 192.168.18.13 has changed and you have requested strict checking.
 Host key verification failed.
 ```
 
-**RESULT:** So, to fix that we need to run `ssh-keygen -R pi`, and after that it will work simply. Source: [Click here](https://stackoverflow.com/a/23150466/10012446)
+**RESULT:** So, to fix that we need to run below commands and after that it will work simply. Source: [Click here](https://stackoverflow.com/a/23150466/10012446)
+
+```bash
+# src: https://askubuntu.com/a/9804/702911
+ssh-keygen -R pi
+ssh-keygen -R server.example.com
+```
 
 
 ## Install docker
