@@ -35,6 +35,12 @@ Playing files such that they keep playing after logout when ssh?
 # 5. now use `exit` commadn to exit logout and exit ssh session
 ```
 
+You can control the sound level via:
+
+```bash
+sudo alsamixer
+```
+
 # Device Details
 
 - raspberry pi4 model-b
