@@ -25,6 +25,16 @@ sudo apt-get install sox libsox-fmt-all
 sudo play sample-3s.mp3
 ```
 
+Playing files such that they keep playing after logout when ssh?
+
+```bash
+# 1. download youtube files for audio only via youtube-dl-gui
+# 2. convert to mp3 using: https://convertio.co/opus-mp3/
+# 3. use `server -l 8080` and download that file to raspberry pi
+# 4. run the command `nohup sudo play myfile.mp3 &` to run it in background
+# 5. now use `exit` commadn to exit logout and exit ssh session
+```
+
 # Device Details
 
 - raspberry pi4 model-b
