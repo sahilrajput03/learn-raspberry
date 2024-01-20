@@ -16,13 +16,13 @@ Play mp3 file with ffmplay utility:
 # insatll ffmpeg
 sudo apt install ffmpeg
 # Play mp3 file:
-ffplay -nodisp ./sample-3s.mp3
+sudo ffplay -nodisp ./sample-3s.mp3
 
 # With sax:
 # Installation: ```
 sudo apt-get install sox libsox-fmt-all
 # Play mp3 file:
-play sample-3s.mp3
+sudo play sample-3s.mp3
 ```
 
 # Device Details
